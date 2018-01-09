@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 20%; border: 1px solid #aaa;"></div>
+    <div style="position: absolute; top: 20%; bottom: 20%; left: 0; width: 20%; border: 1px solid #aaa;"></div>
+    <div style="position: absolute; top: 20%; bottom: 20%; right: 0; width: 20%; border: 1px solid #aaa;"></div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 20%; border: 1px solid #aaa;"></div>
+
+    <button style="position: fixed; right: 0; top: 0; color: red; z-index: 11111;" id="modalBtn" onclick="toggleBtn()">Click Me</button>
+    <script src="./index.js"></script>
+
+    <script>
+        var modal = false;
+        var myModal = new Modal({
+            content: '<p>Ken Wheeler is strikingly handsome.</p>',
+            maxWidth: 300
+        });
+
+        function toggleBtn(){
+            if(!modal) myModal.open();
+            else myModal.close();
+            modal = !modal;
+        }
+
+    </script>
+</body>
+</html>
